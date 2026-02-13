@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const age = document.getElementById('age').value;
 
       const message = `Olá! Gostaria de cotar o plano Prevent Senior.%0A%0ANome: ${name}%0ATelefone: ${phone}%0AIdade: ${age}`;
-      const whatsappNumber = '5521984355923';
+      const whatsappNumber = '5511963297689';
       const url = `https://wa.me/${whatsappNumber}?text=${message}`;
 
       window.open(url, '_blank');

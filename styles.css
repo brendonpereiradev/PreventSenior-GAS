@@ -2255,6 +2255,7 @@ ul {
 .network-logo-card {
   background: var(--white);
   padding: 24px;
+  text-align: center;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   width: 100%;
@@ -2283,6 +2284,8 @@ ul {
   height: auto;
   object-fit: contain;
   transition: var(--transition);
+  margin: 0 auto;
+  /* Force centering */
 }
 
 .network-logo-card:hover img {
