@@ -2190,3 +2190,110 @@ ul {
   margin: 0 auto 12px;
   display: block;
 }
+
+/* ===== REDE CREDENCIADA ===== */
+.accredited-network {
+  background: var(--white);
+  padding-bottom: 80px;
+}
+
+.network-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.network-column {
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+}
+
+.network-column:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue-light);
+}
+
+.network-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--blue-dark);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  position: relative;
+  display: table;
+  /* To allow centering with margin auto */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.network-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: var(--blue-accent);
+  border-radius: 2px;
+}
+
+.network-logos {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.network-logo-card {
+  background: var(--white);
+  padding: 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  border: 1px solid var(--gray-200);
+  min-height: 110px;
+  border-left: 4px solid var(--blue-brand);
+}
+
+.network-logo-card.featured {
+  /* Class kept for potential future use or specific overrides */
+}
+
+.network-logo-card:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+.network-logo-card img {
+  max-width: 200px;
+  max-height: 70px;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+.network-logo-card:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .network-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .network-column {
+    padding: 30px 20px;
+  }
+}
