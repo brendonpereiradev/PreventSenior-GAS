@@ -167,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ===== Units Carousel (Infinite Loop) =====
-  // ===== Units Carousel (Infinite Loop) =====
   const initCarousel = (trackId, prevId, nextId, dotsId, wrapperId) => {
     const track = document.getElementById(trackId);
     const prevBtn = document.getElementById(prevId);
