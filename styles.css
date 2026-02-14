@@ -2224,6 +2224,13 @@ ul {
     margin-right: 12px;
   }
 
+  .nav-toggle {
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .logo-img {
     height: 28px;
   }
