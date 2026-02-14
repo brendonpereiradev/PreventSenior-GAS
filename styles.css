@@ -2247,6 +2247,16 @@ ul {
   }
 
   .logo-img {
+    height: 28px;
+  }
+
+  .logo-gas-header {
+    height: 28px;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo-img {
     height: 22px;
   }
 
