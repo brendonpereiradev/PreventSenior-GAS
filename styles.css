@@ -312,6 +312,7 @@ ul {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.08);
   animation: float-particle linear infinite;
+  will-change: transform;
 }
 
 .particle:nth-child(1) {
@@ -2070,6 +2071,7 @@ ul {
   .hero-stats {
     flex-direction: column;
     gap: 24px;
+    align-items: center;
   }
 
   .hero-cta-group {
