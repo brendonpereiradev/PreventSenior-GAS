@@ -411,7 +411,7 @@ ul {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-bottom: 28px;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); Removed for performance */
 }
 
 .hero-badge::before {
@@ -511,7 +511,7 @@ ul {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: var(--transition);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); Removed for performance */
   cursor: pointer;
 }
 
@@ -539,10 +539,18 @@ ul {
   font-weight: 800;
   color: var(--white);
   line-height: 1;
+  position: relative;
+  display: inline-block;
 }
 
 .stat-number .accent {
   color: var(--blue-accent);
+  position: absolute;
+  top: 0;
+  right: -24px;
+  /* Adjust spacing of the plus sign */
+  font-size: 1.5rem;
+  /* Optional: adjust size if needed */
 }
 
 .stat-label {
@@ -2071,7 +2079,12 @@ ul {
   .hero-stats {
     flex-direction: column;
     gap: 24px;
-    align-items: center;
+    align-items: stretch;
+  }
+
+  .stat-item {
+    width: 100%;
+    text-align: center;
   }
 
   .hero-cta-group {
@@ -2234,7 +2247,15 @@ ul {
   }
 
   .logo-img {
-    height: 28px;
+    height: 22px;
+  }
+
+  .logo-gas-header {
+    height: 22px;
+  }
+
+  .logo {
+    gap: 6px;
   }
 }
 
