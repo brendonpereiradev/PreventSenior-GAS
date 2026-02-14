@@ -2164,10 +2164,29 @@ ul {
 
   .cta-content-left .section-label,
   .cta-content-left .section-title,
-  .cta-content-left p {
+  .cta-content-left p,
+  .no-increase-text .section-label,
+  .no-increase-text .section-title,
+  .no-increase-text p {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .no-increase-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .no-increase-text .btn-primary {
+    width: auto;
+    max-width: none;
+    margin: 16px auto 0;
+  }
+
+  .header .container {
+    gap: 12px;
   }
 
   .cta-content-left .trust-badges {
@@ -2237,36 +2256,40 @@ ul {
   }
 
   .header-phone {
-    margin-right: 12px;
+    margin-right: 8px;
   }
 
   .nav-toggle {
-    margin-right: 4px;
+    margin-right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .logo-img {
-    height: 28px;
+    height: 24px;
   }
 
   .logo-gas-header {
-    height: 28px;
+    height: 24px;
   }
 }
 
 @media (max-width: 360px) {
   .logo-img {
-    height: 22px;
+    height: 18px;
   }
 
   .logo-gas-header {
-    height: 22px;
+    height: 18px;
   }
 
   .logo {
     gap: 6px;
+  }
+
+  .logo-divider {
+    height: 16px;
   }
 }
 
