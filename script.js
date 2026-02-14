@@ -13,21 +13,24 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll, { passive: true });
 
   // ===== Scroll animations (Intersection Observer) =====
-  const fadeEls = document.querySelectorAll('.fade-in');
+  // Defer observer to prioritize smooth particle animation start
+  setTimeout(() => {
+    const fadeEls = document.querySelectorAll('.fade-in');
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    );
 
-  fadeEls.forEach((el) => observer.observe(el));
+    fadeEls.forEach((el) => observer.observe(el));
+  }, 500);
 
   // ===== Smooth scroll for anchor links =====
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -306,6 +309,64 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // Initialize both carousels
-  initCarousel('carousel-track-rj', 'carousel-prev-rj', 'carousel-next-rj', 'carousel-dots-rj', 'units-carousel-rj');
-  initCarousel('carousel-track-sp', 'carousel-prev-sp', 'carousel-next-sp', 'carousel-dots-sp', 'units-carousel-sp');
+  // Initialize both carousels with a slight delay to allow initial paint/animations
+  setTimeout(() => {
+    initCarousel('carousel-track-rj', 'carousel-prev-rj', 'carousel-next-rj', 'carousel-dots-rj', 'units-carousel-rj');
+    initCarousel('carousel-track-sp', 'carousel-prev-sp', 'carousel-next-sp', 'carousel-dots-sp', 'units-carousel-sp');
+  }, 100);
+
+  // ===== Smart Geolocation (SP/RJ) =====
+  const localizeContent = async () => {
+    const spWrapper = document.getElementById('units-wrapper-sp');
+    const rjWrapper = document.getElementById('units-wrapper-rj');
+    const heroTitle = document.querySelector('.hero h1');
+
+    if (!spWrapper || !rjWrapper) return;
+
+    // Check session storage first
+    const cachedRegion = sessionStorage.getItem('preventSenior_region');
+
+    if (cachedRegion === 'SP') {
+      applySPLayout();
+    } else if (!cachedRegion) {
+      try {
+        // Fetch user location (timeout after 2s to not hang)
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 2000);
+
+        const response = await fetch('https://ipapi.co/json/', { signal: controller.signal });
+        const data = await response.json();
+        clearTimeout(timeoutId);
+
+        if (data.region_code === 'SP' || data.region === 'Sao Paulo') {
+          sessionStorage.setItem('preventSenior_region', 'SP');
+          applySPLayout();
+        } else {
+          sessionStorage.setItem('preventSenior_region', 'Other');
+        }
+      } catch (error) {
+        console.warn('Geolocation check skipped or failed:', error);
+      }
+    }
+
+    function applySPLayout() {
+      // 1. Swap Units Order: SP first
+      if (spWrapper.parentNode === rjWrapper.parentNode) {
+        // Move SP wrapper before RJ wrapper
+        rjWrapper.parentNode.insertBefore(spWrapper, rjWrapper);
+      }
+
+      // 2. Update Hero Text
+      if (heroTitle) {
+        heroTitle.innerHTML = `
+          Seu Plano de Saúde<br>
+          <span class="highlight">Prevent Senior</span><br>
+          em São Paulo e Rio de Janeiro
+        `;
+      }
+    }
+  };
+
+  // Run asynchronously
+  localizeContent();
 });

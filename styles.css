@@ -321,7 +321,7 @@ ul {
   left: 10%;
   top: 20%;
   animation-duration: 8s;
-  animation-delay: 0s;
+  animation-delay: -0s;
 }
 
 .particle:nth-child(2) {
@@ -330,7 +330,7 @@ ul {
   left: 25%;
   top: 60%;
   animation-duration: 12s;
-  animation-delay: 2s;
+  animation-delay: -2s;
 }
 
 .particle:nth-child(3) {
@@ -339,7 +339,7 @@ ul {
   left: 50%;
   top: 30%;
   animation-duration: 10s;
-  animation-delay: 1s;
+  animation-delay: -1s;
 }
 
 .particle:nth-child(4) {
@@ -348,7 +348,7 @@ ul {
   left: 70%;
   top: 70%;
   animation-duration: 9s;
-  animation-delay: 3s;
+  animation-delay: -3s;
 }
 
 .particle:nth-child(5) {
@@ -357,7 +357,7 @@ ul {
   left: 85%;
   top: 15%;
   animation-duration: 11s;
-  animation-delay: 0.5s;
+  animation-delay: -0.5s;
 }
 
 .particle:nth-child(6) {
@@ -366,7 +366,7 @@ ul {
   left: 40%;
   top: 80%;
   animation-duration: 14s;
-  animation-delay: 4s;
+  animation-delay: -4s;
 }
 
 @keyframes float-particle {
@@ -1663,6 +1663,7 @@ ul {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
 }
 
 .fade-in.visible {

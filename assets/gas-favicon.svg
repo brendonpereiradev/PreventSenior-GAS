@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      /* Increased font weight, slightly reduced size, and adjusted font family for better rendering at small sizes */
+      .text { font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif; font-weight: 800; font-size: 24px; fill: #003399; }
+      .dot { fill: #00a859; }
+      .bg { fill: #ffffff; }
+    </style>
+  </defs>
+  <!-- Background with slightly less rounded corners to maximize space -->
+  <rect width="64" height="64" rx="8" class="bg"/>
+  
+  <!-- Text centered with slightly more breathing room (y adjusted for visual center) -->
+  <text x="32" y="41" text-anchor="middle" class="text">G<tspan class="dot">.</tspan>A<tspan class="dot">.</tspan>S</text>
+</svg>
