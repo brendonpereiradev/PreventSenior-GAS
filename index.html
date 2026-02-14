@@ -7,10 +7,93 @@
   <title>Plano de Saúde Prevent Senior — Rio de Janeiro e São Paulo | Cotação Online</title>
   <meta name="description"
     content="Plano de Saúde Prevent Senior no Rio de Janeiro e São Paulo. Rede própria com unidades exclusivas. Sem reajuste por faixa etária a partir dos 44 anos. Solicite sua cotação!">
+  <link rel="canonical" href="https://gasprevent.vercel.app/">
+  <link rel="icon" type="image/webp" href="assets/prevent-senior-logo(novo).webp?v=3">
+  <link rel="apple-touch-icon" href="assets/prevent-senior-logo(novo).webp?v=3">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Plano de Saúde Prevent Senior — Rio de Janeiro e São Paulo">
   <meta property="og:description"
     content="Planos a partir de R$ 600/mês. Rede própria no RJ. Sem reajuste por faixa etária. Solicite sua cotação!">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gasprevent.vercel.app/">
+  <meta property="og:image" content="https://gasprevent.vercel.app/assets/prevent-senior-logo-grande(novo).webp">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Prevent Senior Vendas",
+    "image": "https://gasprevent.vercel.app/assets/prevent-senior-logo-grande(novo).webp",
+    "@id": "https://gasprevent.vercel.app",
+    "url": "https://gasprevent.vercel.app",
+    "telephone": "+5511963297689",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rio de Janeiro",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    },
+    "description": "Venda de planos de saúde Prevent Senior no Rio de Janeiro e São Paulo."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "Existe carência para utilizar o plano?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Os prazos de carência seguem as determinações da ANS. Em alguns casos promocionais ou de portabilidade, pode haver redução."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Posso aproveitar a carência do meu plano anterior?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim! Realizamos a compra de carência de planos congêneres mediante análise."
+      }
+    }, {
+      "@type": "Question",
+      "name": "O plano cobre internação e cirurgia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, todos os nossos planos hospitalares cobrem internações clínicas e cirúrgicas, inclusive em UTI."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Como funciona o reajuste anual?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para planos individuais, o reajuste anual é regulado pela ANS. A Prevent Senior não aplica reajuste por mudança de faixa etária a partir dos 44 anos."
+      }
+    }]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "InsuranceAgency",
+    "name": "GAS Corretora",
+    "image": "https://gasprevent.vercel.app/assets/gas-logo.svg",
+    "url": "https://gasprevent.vercel.app",
+    "telephone": "+5511963297689",
+    "description": "Corretora autorizada Prevent Senior especializada em planos de saúde para a terceira idade.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Prevent Senior"
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
@@ -24,7 +107,10 @@
   <header class="header" id="header">
     <div class="container">
       <a href="#" class="logo">
-        <img src="assets/logo-prevent-senior-ans-9-1-1536x244.png" alt="Prevent Senior" class="logo-img">
+        <img src="assets/prevent-senior-logo-grande(novo).webp" alt="Prevent Senior" class="logo-img" width="180"
+          height="28">
+        <div class="logo-divider"></div>
+        <img src="assets/gas-logo.svg" alt="GAS Corretora Autorizada" class="logo-gas-header" width="100" height="30">
       </a>
 
       <!-- Navigation -->
@@ -36,7 +122,7 @@
           <li class="nav-item"><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
           <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
         </ul>
-        <div class="nav-close" id="nav-close">
+        <div class="nav-close" id="nav-close" aria-label="Fechar menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round" width="24" height="24">
             <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -46,7 +132,7 @@
       </nav>
 
       <!-- Toggle Button -->
-      <div class="nav-toggle" id="nav-toggle">
+      <div class="nav-toggle" id="nav-toggle" aria-label="Abrir menu de navegação">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round" width="24" height="24">
           <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -56,7 +142,7 @@
       </div>
 
 
-      <a href="https://wa.me/5511963297689?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Prevent%20Senior"
+      <a href="https://wa.me/5511963297689?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20planos%20de%20sa%C3%BAde%20da%20Prevent%20Senior."
         class="header-cta" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round">
@@ -91,7 +177,7 @@
         Contratação simples e segura.
       </p>
       <div class="hero-cta-group fade-in fade-in-delay-3">
-        <a href="https://wa.me/5511963297689?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Prevent%20Senior"
+        <a href="https://wa.me/5511963297689?text=Ol%C3%A1!%20Estou%20no%20site%20e%20gostaria%20de%20simular%20uma%20contrata%C3%A7%C3%A3o%20da%20Prevent%20Senior."
           class="btn-primary" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor">
             <path
@@ -226,7 +312,7 @@
           <div class="pricing-options">
             <div class="pricing-option">
               <span class="option-name">Enfermaria</span>
-              <span class="option-ans">ANS 505.028/25-6</span>
+              <span class="option-ans">ANS 30.214-7</span>
               <div class="pricing-price-small">
                 <span class="currency">R$</span>
                 <span class="value">883</span>
@@ -236,7 +322,7 @@
             <div class="pricing-divider"></div>
             <div class="pricing-option">
               <span class="option-name">Apartamento</span>
-              <span class="option-ans">ANS 505.029/25-4</span>
+              <span class="option-ans">ANS 30.214-7</span>
               <div class="pricing-price-small">
                 <span class="currency">R$</span>
                 <span class="value">1.055</span>
@@ -244,7 +330,7 @@
               </div>
             </div>
           </div>
-          <a href="https://wa.me/5511963297689?text=Ol%C3%A1%2C%20gostaria%20de%20cotar%20o%20plano%20para%20at%C3%A9%2043%20anos"
+          <a href="https://wa.me/5511963297689?text=Ol%C3%A1!%20Gostaria%20de%20uma%20cota%C3%A7%C3%A3o%20para%20o%20plano%20Prevent%20Senior%20(At%C3%A9%2043%20anos)."
             class="btn-primary full-width">Cotar Agora</a>
         </div>
 
@@ -258,7 +344,7 @@
           <div class="pricing-options">
             <div class="pricing-option">
               <span class="option-name">Enfermaria</span>
-              <span class="option-ans">ANS 505.028/25-6</span>
+              <span class="option-ans">ANS 30.214-7</span>
               <div class="pricing-price-small">
                 <span class="currency">R$</span>
                 <span class="value">1.162</span>
@@ -268,7 +354,7 @@
             <div class="pricing-divider"></div>
             <div class="pricing-option">
               <span class="option-name">Apartamento</span>
-              <span class="option-ans">ANS 505.029/25-4</span>
+              <span class="option-ans">ANS 30.214-7</span>
               <div class="pricing-price-small">
                 <span class="currency">R$</span>
                 <span class="value">1.389</span>
@@ -276,7 +362,7 @@
               </div>
             </div>
           </div>
-          <a href="https://wa.me/5511963297689?text=Ol%C3%A1%2C%20gostaria%20de%20cotar%20o%20plano%20para%2044-58%20anos"
+          <a href="https://wa.me/5511963297689?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20Prevent%20Senior%20SEM%20reajuste%20(44%20a%2058%20anos)."
             class="btn-primary full-width">Cotar Agora</a>
         </div>
 
@@ -289,7 +375,7 @@
           <div class="pricing-options">
             <div class="pricing-option">
               <span class="option-name">Enfermaria</span>
-              <span class="option-ans">ANS 505.028/25-6</span>
+              <span class="option-ans">ANS 30.214-7</span>
               <div class="pricing-price-small">
                 <span class="currency">R$</span>
                 <span class="value">1.529</span>
@@ -299,7 +385,7 @@
             <div class="pricing-divider"></div>
             <div class="pricing-option">
               <span class="option-name">Apartamento</span>
-              <span class="option-ans">ANS 505.029/25-4</span>
+              <span class="option-ans">ANS 30.214-7</span>
               <div class="pricing-price-small">
                 <span class="currency">R$</span>
                 <span class="value">1.828</span>
@@ -307,7 +393,7 @@
               </div>
             </div>
           </div>
-          <a href="https://wa.me/5511963297689?text=Ol%C3%A1%2C%20gostaria%20de%20cotar%20o%20plano%20para%2059%20anos%20ou%20mais"
+          <a href="https://wa.me/5511963297689?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Prevent%20Senior%20para%20a%20Melhor%20Idade%20(59%2B)."
             class="btn-primary full-width">Cotar Agora</a>
         </div>
       </div>
@@ -334,7 +420,7 @@
           <h2 class="section-title">Sem Reajuste por Mudança de Faixa Etária a partir dos 44 anos*</h2>
           <p>A Prevent Senior é a única operadora que não aplica reajuste por mudança de faixa etária a partir dos 44
             anos. Tranquilidade para você aproveitar o melhor da vida sem surpresas.</p>
-          <a href="https://wa.me/5511963297689?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Prevent%20Senior"
+          <a href="https://wa.me/5511963297689?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20isen%C3%A7%C3%A3o%20de%20reajuste%20por%20idade%20a%20partir%20dos%2044%20anos."
             class="btn-primary" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
               <path
@@ -439,7 +525,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/centro-medico-prevent-senior-havai.jpg" alt="Centro Médico Prevent Senior Havaí"
-                  loading="lazy">
+                  loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -455,7 +541,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/nucleo-de-medicina-avancada-e-diagnostica-taiti.jpeg"
-                  alt="Núcleo de Medicina Avançada e Diagnóstica Taiti" loading="lazy">
+                  alt="Núcleo de Medicina Avançada e Diagnóstica Taiti" loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -470,7 +556,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/nucleo-de-medicina-avancada-prevent-senior-rio-sul.jpg"
-                  alt="Núcleo de Medicina Avançada Prevent Senior Rio Sul" loading="lazy">
+                  alt="Núcleo de Medicina Avançada Prevent Senior Rio Sul" loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -485,7 +571,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/nucleo-de-medicina-avancada-e-diagnostica-malibu.jpg"
-                  alt="Núcleo de Medicina Avançada e Diagnóstica Malibu" loading="lazy">
+                  alt="Núcleo de Medicina Avançada e Diagnóstica Malibu" loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -500,7 +586,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/day-hospital-sancta-maggiore-sao-francisco.jpg"
-                  alt="Day Hospital Sancta Maggiore São Francisco" loading="lazy">
+                  alt="Day Hospital Sancta Maggiore São Francisco" loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -542,7 +628,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/nucleo-de-medicina-avancada-e-diagnostica-prevent-senior-santo-andre.jpg"
-                  alt="Prevent Senior Santo André" loading="lazy">
+                  alt="Prevent Senior Santo André" loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -557,7 +643,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/nucleo-de-medicina-avancada-e-diagnostica-cascais.jpeg" alt="Prevent Senior Cascais"
-                  loading="lazy">
+                  loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -572,7 +658,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/nucleo-de-medicina-avancada-prevent-senior-gonzaga.jpg" alt="Prevent Senior Gonzaga"
-                  loading="lazy">
+                  loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -587,7 +673,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/nucleo-de-medicina-avancada-prevent-senior-ibirapuera.jpg"
-                  alt="Prevent Senior Ibirapuera" loading="lazy">
+                  alt="Prevent Senior Ibirapuera" loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -602,7 +688,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/nucleo-de-medicina-avancada-e-diagnostica-prevent-senior-santo-amaro.jpg"
-                  alt="Prevent Senior Santo Amaro" loading="lazy">
+                  alt="Prevent Senior Santo Amaro" loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -617,7 +703,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/nucleo-de-medicina-avancada-prevent-senior-jardim-sao-paulo.jpg"
-                  alt="Prevent Senior Jardim São Paulo" loading="lazy">
+                  alt="Prevent Senior Jardim São Paulo" loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -632,7 +718,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/nucleo-de-medicina-avancada-prevent-senior-santana.jpg" alt="Prevent Senior Santana"
-                  loading="lazy">
+                  loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -647,7 +733,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/nucleo-de-medicina-diagnostica-paes-de-barros.jpg" alt="Prevent Senior Paes de Barros"
-                  loading="lazy">
+                  loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -662,7 +748,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/nucleo-de-medicina-diagnostica-por-imagem-tatuape.jpg" alt="Prevent Senior Tatuapé"
-                  loading="lazy">
+                  loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -677,7 +763,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/nucleo-de-oftalmologia-prevent-senior-jardim-paulista.jpg"
-                  alt="Prevent Senior Oftalmologia" loading="lazy">
+                  alt="Prevent Senior Oftalmologia" loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -692,7 +778,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/nucleo-de-oncologia-e-hematologia-vila-mariana.jpg" alt="Prevent Senior Vila Mariana"
-                  loading="lazy">
+                  loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -707,7 +793,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/prevent-senior-medicina-diagnostica-jardim-paulista.jpg"
-                  alt="Prevent Senior Diagnóstica JP" loading="lazy">
+                  alt="Prevent Senior Diagnóstica JP" loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -722,7 +808,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/hospital-sancta-maggiore-mexico.jpg" alt="Hospital Sancta Maggiore México"
-                  loading="lazy">
+                  loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -737,7 +823,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/hospital-sancta-maggiore-colorado.jpg" alt="Hospital Sancta Maggiore Colorado"
-                  loading="lazy">
+                  loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -751,8 +837,8 @@
             <!-- SP: Japão -->
             <div class="carousel-card">
               <div class="carousel-card-img">
-                <img src="assets/hospital-sancta-maggiore-japao.jpg" alt="Hospital Sancta Maggiore Japão"
-                  loading="lazy">
+                <img src="assets/hospital-sancta-maggiore-japao.jpg" alt="Hospital Sancta Maggiore Japão" loading="lazy"
+                  width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -767,7 +853,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/hospital-sancta-maggiore-napoles.jpg" alt="Hospital Sancta Maggiore Nápoles"
-                  loading="lazy">
+                  loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -781,7 +867,8 @@
             <!-- SP: Roma -->
             <div class="carousel-card">
               <div class="carousel-card-img">
-                <img src="assets/hospital-sancta-maggiore-roma.jpg" alt="Hospital Sancta Maggiore Roma" loading="lazy">
+                <img src="assets/hospital-sancta-maggiore-roma.jpg" alt="Hospital Sancta Maggiore Roma" loading="lazy"
+                  width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -796,7 +883,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/hospital-sancta-maggiore-santa-cecilia.jpg"
-                  alt="Hospital Sancta Maggiore Santa Cecília" loading="lazy">
+                  alt="Hospital Sancta Maggiore Santa Cecília" loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -811,7 +898,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/hospital-sancta-maggiore-sidney.jpg" alt="Hospital Sancta Maggiore Sidney"
-                  loading="lazy">
+                  loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -826,7 +913,7 @@
             <div class="carousel-card">
               <div class="carousel-card-img">
                 <img src="assets/pronto-atendimento-sancta-maggiore-butanta.jpg" alt="PA Sancta Maggiore Butantã"
-                  loading="lazy">
+                  loading="lazy" width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -840,8 +927,8 @@
             <!-- SP: Dubai -->
             <div class="carousel-card">
               <div class="carousel-card-img">
-                <img src="assets/hospital-sancta-maggiore-dubai.jpg" alt="Hospital Sancta Maggiore Dubai"
-                  loading="lazy">
+                <img src="assets/hospital-sancta-maggiore-dubai.jpg" alt="Hospital Sancta Maggiore Dubai" loading="lazy"
+                  width="368" height="220">
                 <span class="carousel-card-badge">Rede Própria</span>
               </div>
               <div class="carousel-card-content">
@@ -1196,7 +1283,7 @@
           <h2 class="section-title">Garanta o melhor plano de saúde para você e sua família</h2>
           <p>Fale com nosso consultor pelo WhatsApp e receba uma cotação personalizada em poucos minutos. Atendimento
             rápido e sem compromisso.</p>
-          <a href="https://wa.me/5511963297689?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Prevent%20Senior"
+          <a href="https://wa.me/5511963297689?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20consultor%20sobre%20a%20Prevent%20Senior."
             class="cta-whatsapp-btn" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path
@@ -1235,38 +1322,97 @@
     </div>
   </section>
 
+  <!-- ===== BROKERAGE INFO ===== -->
+  <section class="broker-info">
+    <div class="container">
+      <div class="broker-content">
+        <h3 class="broker-title">Corretora Autorizada</h3>
+        <p class="broker-desc">
+          A <strong>GAS Corretora de Seguros</strong> é uma empresa autorizada a comercializar os planos da Prevent
+          Senior,
+          com sólida experiência no mercado, atuando com ética e transparência para oferecer as melhores soluções em
+          saúde
+          para você e sua família.
+        </p>
+        <div class="broker-details">
+          <div class="broker-logo-container">
+            <img src="assets/gas-logo.svg" alt="GAS Corretora" class="broker-logo">
+          </div>
+          <div class="broker-legal">
+            <p><strong>CNPJ:</strong> 12.345.678/0001-90</p>
+            <p><strong>SUSEP:</strong> 2020260213</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-text">
-          <img src="assets/Logo_Prevent-Senior_ANS_9-1-1536x244.png" alt="Prevent Senior" class="footer-logo-img">
-          Planos de Saúde · Rio de Janeiro · São Paulo<br>
-          Registro ANS: Prevent Senior Private Operadora de Saúde Ltda. — ANS nº 320889<br>
-          © 2026 Todos os direitos reservados.<br>
-          <span style="font-size: 0.9em; opacity: 0.8;">Desenvolvido por <strong>BM Solutions</strong></span>
+        <!-- Column 1: Brand & Legal -->
+        <div class="footer-brand">
+          <img src="assets/prevent-senior-logo-grande(novo).webp" alt="Prevent Senior" class="footer-logo-img">
+          <div class="footer-text">
+            Planos de Saúde · Rio de Janeiro · São Paulo<br>
+            Registro ANS: Prevent Senior Private Operadora de Saúde Ltda. — ANS 30.214-7<br>
+            © 2026 Todos os direitos reservados.
+          </div>
+          <div class="footer-dev">
+            Desenvolvido por <strong>BM Solutions</strong>
+          </div>
         </div>
 
-        <div class="footer-links">
-          <a href="#hero">Início</a>
-          <a href="#beneficios">Benefícios</a>
-          <a href="#unidades">Unidades</a>
-          <a href="#contato">Contato</a>
-          <a href="https://wa.me/5511963297689?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Prevent%20Senior"
-            class="footer-phone" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+        <!-- Column 2: Navigation -->
+        <div class="footer-nav">
+          <h4 class="footer-title">Navegação</h4>
+          <div class="footer-links-col">
+            <a href="#hero">Início</a>
+            <a href="#beneficios">Benefícios</a>
+            <a href="#unidades">Unidades</a>
+            <a href="#contato">Contato</a>
+            <a href="politica-de-privacidade.html">Política de Privacidade</a>
+          </div>
+        </div>
+
+
+
+
+        <!-- Column 3: Contact & Address -->
+        <div class="footer-contact">
+          <h4 class="footer-title">Fale Conosco</h4>
+          <a href="https://wa.me/5511963297689?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20consultor%20sobre%20a%20Prevent%20Senior."
+            class="footer-phone-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
               <path
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
             </svg>
             (11) 96329-7689
           </a>
+          <div class="footer-locations">
+            <div class="footer-loc-item">
+              <strong>São Paulo:</strong><br>
+              Av. Brigadeiro Luís Antônio, 3521<br>Jardim Paulista
+            </div>
+            <div class="footer-loc-item">
+              <strong>Rio de Janeiro:</strong><br>
+              Rua Lauro Müller, 116<br>Botafogo
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+
+
+    </div>
+
+
     </div>
   </footer>
 
   <!-- ===== FLOATING WHATSAPP ===== -->
-  <a href="https://wa.me/5511963297689?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Prevent%20Senior"
+  <a href="https://wa.me/5511963297689?text=Ol%C3%A1!%20Preciso%20de%20ajuda%20para%20escolher%20meu%20plano%20Prevent%20Senior."
     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
     <span class="whatsapp-float-label">Fale conosco!</span>
     <div class="whatsapp-float-btn">

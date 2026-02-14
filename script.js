@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const phone = document.getElementById('phone').value;
       const age = document.getElementById('age').value;
 
-      const message = `Olá! Gostaria de cotar o plano Prevent Senior.%0A%0ANome: ${name}%0ATelefone: ${phone}%0AIdade: ${age}`;
+      const message = `*Olá! Preenchi o formulário no site e gostaria de uma cotação.*%0A%0A*Nome:* ${name}%0A*Telefone:* ${phone}%0A*Idade:* ${age}`;
       const whatsappNumber = '5511963297689';
       const url = `https://wa.me/${whatsappNumber}?text=${message}`;
 
