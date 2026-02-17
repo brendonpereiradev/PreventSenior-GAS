@@ -113,14 +113,10 @@ ul {
   transition: var(--transition);
 }
 
-.logo-divider {
-  width: 1px;
-  height: 24px;
-  background-color: rgba(255, 255, 255, 0.3);
-}
+
 
 .logo-gas-header {
-  height: 32px;
+  height: 42px;
   width: auto;
   filter: brightness(0) invert(1);
   transition: var(--transition);
@@ -188,7 +184,7 @@ ul {
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 20px;
 }
 
 .nav-link {
@@ -2235,7 +2231,11 @@ ul {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 16px;
+    padding: 0 12px;
+  }
+
+  .header .container {
+    gap: 8px;
   }
 
   .hero h1 {
@@ -2247,8 +2247,9 @@ ul {
   }
 
   .header-cta {
-    padding: 10px;
+    padding: 8px;
     border-radius: 50%;
+    flex-shrink: 0;
   }
 
   .header-phone span {
@@ -2261,35 +2262,47 @@ ul {
 
   .nav-toggle {
     margin-right: 0;
+    padding: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .logo {
+    flex-shrink: 1;
+    min-width: 0;
+    /* Allow text/content to wrap/shrink if needed */
+    max-width: 65%;
+    /* Ensure it doesn't push toggle off */
   }
 
   .logo-img {
-    height: 24px;
+    height: 26px;
+    width: auto;
   }
 
   .logo-gas-header {
-    height: 24px;
+    height: 32px;
+    width: auto;
   }
 }
 
 @media (max-width: 360px) {
+  .container {
+    padding: 0 8px;
+  }
+
   .logo-img {
-    height: 18px;
+    height: 22px;
   }
 
   .logo-gas-header {
-    height: 18px;
+    height: 28px;
   }
 
   .logo {
-    gap: 6px;
-  }
-
-  .logo-divider {
-    height: 16px;
+    gap: 4px;
   }
 }
 

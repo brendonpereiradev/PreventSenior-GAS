@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const age = document.getElementById('age').value;
 
       const message = `*Olá! Preenchi o formulário no site e gostaria de uma cotação.*%0A%0A*Nome:* ${name}%0A*Telefone:* ${phone}%0A*Idade:* ${age}`;
-      const whatsappNumber = '5511963297689';
+      const whatsappNumber = '5521997376154';
       const url = `https://wa.me/${whatsappNumber}?text=${message}`;
 
       window.open(url, '_blank');
