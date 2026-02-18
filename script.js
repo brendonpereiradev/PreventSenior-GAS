@@ -79,52 +79,60 @@ document.addEventListener('DOMContentLoaded', () => {
   const fontResetBtn = document.getElementById('font-reset');
   const htmlEl = document.documentElement;
 
-  // Toggle controls
-  a11yToggle.addEventListener('click', () => {
-    a11yContainer.classList.toggle('active');
-  });
+  if (a11yToggle && a11yContainer) {
+    // Toggle controls
+    a11yToggle.addEventListener('click', () => {
+      a11yContainer.classList.toggle('active');
+    });
 
-  // Close when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!a11yContainer.contains(e.target) && a11yContainer.classList.contains('active')) {
-      a11yContainer.classList.remove('active');
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!a11yContainer.contains(e.target) && a11yContainer.classList.contains('active')) {
+        a11yContainer.classList.remove('active');
+      }
+    });
+
+    // Font size control
+    // Base font size is 16px (100%)
+    let currentFontSize = 100;
+    const minFontSize = 100;
+    const maxFontSize = 150; // Up to 24px equivalent
+    const step = 10;
+
+    const setFontSize = (size) => {
+      currentFontSize = size;
+      htmlEl.style.fontSize = `${currentFontSize}%`;
+      localStorage.setItem('preventSenior_fontSize', currentFontSize);
+    };
+
+    // Load saved preference
+    const savedFontSize = localStorage.getItem('preventSenior_fontSize');
+    if (savedFontSize) {
+      setFontSize(parseInt(savedFontSize));
     }
-  });
 
-  // Font size control
-  // Base font size is 16px (100%)
-  let currentFontSize = 100;
-  const minFontSize = 100;
-  const maxFontSize = 150; // Up to 24px equivalent
-  const step = 10;
+    if (fontIncreaseBtn) {
+      fontIncreaseBtn.addEventListener('click', () => {
+        if (currentFontSize < maxFontSize) {
+          setFontSize(currentFontSize + step);
+        }
+      });
+    }
 
-  const setFontSize = (size) => {
-    currentFontSize = size;
-    htmlEl.style.fontSize = `${currentFontSize}%`;
-    localStorage.setItem('preventSenior_fontSize', currentFontSize);
-  };
+    if (fontDecreaseBtn) {
+      fontDecreaseBtn.addEventListener('click', () => {
+        if (currentFontSize > minFontSize) {
+          setFontSize(currentFontSize - step);
+        }
+      });
+    }
 
-  // Load saved preference
-  const savedFontSize = localStorage.getItem('preventSenior_fontSize');
-  if (savedFontSize) {
-    setFontSize(parseInt(savedFontSize));
+    if (fontResetBtn) {
+      fontResetBtn.addEventListener('click', () => {
+        setFontSize(100);
+      });
+    }
   }
-
-  fontIncreaseBtn.addEventListener('click', () => {
-    if (currentFontSize < maxFontSize) {
-      setFontSize(currentFontSize + step);
-    }
-  });
-
-  fontDecreaseBtn.addEventListener('click', () => {
-    if (currentFontSize > minFontSize) {
-      setFontSize(currentFontSize - step);
-    }
-  });
-
-  fontResetBtn.addEventListener('click', () => {
-    setFontSize(100);
-  });
 
   // ===== Mobile Navigation =====
   const navMenu = document.getElementById('nav-menu');
@@ -369,4 +377,69 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Run asynchronously
   localizeContent();
+
+  // ===== Social Proof Top Bar =====
+  const viewerCountEl = document.getElementById('viewer-count');
+  if (viewerCountEl) {
+    const MIN_VIEWERS = 7;
+    const MAX_VIEWERS = 11;
+    const STORAGE_COUNT = 'socialProof_count';
+    const STORAGE_TS = 'socialProof_ts';
+
+    // Gera número aleatório dentro do range
+    const randomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+    // Inicializa a partir do sessionStorage ou gera novo valor
+    const stored = sessionStorage.getItem(STORAGE_COUNT);
+    const storedTs = sessionStorage.getItem(STORAGE_TS);
+    let currentViewers;
+
+    if (stored && storedTs) {
+      // Recupera valor salvo da sessão
+      currentViewers = parseInt(stored);
+      const elapsed = Date.now() - parseInt(storedTs);
+
+      // Se já passou tempo suficiente, aplica variação
+      if (elapsed > 15000) {
+        const change = Math.random() < 0.5 ? -1 : 1;
+        currentViewers = Math.max(MIN_VIEWERS, Math.min(MAX_VIEWERS, currentViewers + change));
+      }
+    } else {
+      // Primeira visita na sessão
+      currentViewers = randomInRange(MIN_VIEWERS, MAX_VIEWERS);
+    }
+
+    // Salva estado e exibe
+    sessionStorage.setItem(STORAGE_COUNT, currentViewers);
+    sessionStorage.setItem(STORAGE_TS, Date.now());
+    viewerCountEl.textContent = currentViewers;
+
+    // Atualiza o número periodicamente com variação de ±1
+    const updateViewers = () => {
+      const change = Math.random() < 0.5 ? -1 : 1;
+      currentViewers = Math.max(MIN_VIEWERS, Math.min(MAX_VIEWERS, currentViewers + change));
+
+      // Persiste no sessionStorage
+      sessionStorage.setItem(STORAGE_COUNT, currentViewers);
+      sessionStorage.setItem(STORAGE_TS, Date.now());
+
+      // Animação de fade no número
+      viewerCountEl.style.opacity = '0';
+      setTimeout(() => {
+        viewerCountEl.textContent = currentViewers;
+        viewerCountEl.style.opacity = '1';
+      }, 300);
+    };
+
+    // Intervalo aleatório entre 15s e 30s
+    const scheduleUpdate = () => {
+      const delay = randomInRange(15000, 30000);
+      setTimeout(() => {
+        updateViewers();
+        scheduleUpdate();
+      }, delay);
+    };
+
+    scheduleUpdate();
+  }
 });

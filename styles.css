@@ -74,10 +74,70 @@ ul {
   padding: 0 24px;
 }
 
+/* ===== SOCIAL PROOF TOP BAR ===== */
+.topbar-social {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 32px;
+  z-index: 1001;
+  background: linear-gradient(90deg, var(--blue-dark), var(--blue-deep));
+  border-bottom: 1px solid rgba(77, 143, 239, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.topbar-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--whatsapp-green);
+  display: inline-block;
+  animation: topbar-pulse 2s ease-in-out infinite;
+}
+
+@keyframes topbar-pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 6px rgba(37, 211, 102, 0);
+  }
+}
+
+.topbar-text {
+  font-size: 0.75rem;
+  color: var(--gray-300);
+  letter-spacing: 0.3px;
+}
+
+.topbar-text strong {
+  color: var(--white);
+  font-weight: 700;
+}
+
+#viewer-count {
+  transition: opacity 0.3s ease;
+}
+
 /* ===== HEADER ===== */
 .header {
   position: fixed;
-  top: 0;
+  top: 32px;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -118,7 +178,6 @@ ul {
 .logo-gas-header {
   height: 42px;
   width: auto;
-  filter: brightness(0) invert(1);
   transition: var(--transition);
 }
 
@@ -817,6 +876,27 @@ ul {
   line-height: 1.5;
 }
 
+/* Sub-header regional dentro da seção de unidades */
+.units-region-header {
+  margin-top: 60px;
+}
+
+.units-region-header h3.section-title {
+  font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem);
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.region-accent {
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--blue-brand), var(--blue-accent));
+}
+
 /* ===== UNITS CAROUSEL ===== */
 .units-carousel {
   position: relative;
@@ -1419,15 +1499,16 @@ ul {
 }
 
 .broker-title {
-  font-size: 1.25rem;
+  font-size: clamp(1.75rem, 2.5vw + 0.75rem, 2.5rem);
   font-weight: 800;
   color: var(--blue-dark);
+  line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .broker-desc {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--gray-600);
   line-height: 1.6;
 }
@@ -1441,7 +1522,7 @@ ul {
 }
 
 .broker-logo {
-  height: 50px;
+  height: 90px;
   width: auto;
   opacity: 0.8;
   transition: var(--transition);
@@ -1452,7 +1533,7 @@ ul {
 }
 
 .broker-legal {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--gray-500);
   display: flex;
   gap: 24px;
@@ -1466,7 +1547,7 @@ ul {
 
 @media (min-width: 768px) {
   .broker-legal {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
@@ -1552,18 +1633,7 @@ ul {
   transform: translateY(-2px);
 }
 
-.footer-locations {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  font-size: 0.8125rem;
-}
 
-.footer-loc-item strong {
-  color: var(--white);
-  display: block;
-  margin-bottom: 4px;
-}
 
 /* Desktop Grid Layout */
 @media (min-width: 900px) {

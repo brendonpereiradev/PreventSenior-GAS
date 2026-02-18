@@ -84,7 +84,7 @@
     "@context": "https://schema.org",
     "@type": "InsuranceAgency",
     "name": "GAS Corretora",
-    "image": "https://gasprevent.vercel.app/assets/logo-gas.svg",
+    "image": "https://gasprevent.vercel.app/assets/logo-gas-nova.svg",
     "url": "https://gasprevent.vercel.app",
     "telephone": "+5521997376154",
     "description": "Corretora autorizada Prevent Senior especializada em planos de saúde para a terceira idade.",
@@ -109,13 +109,22 @@
 
 <body>
 
+  <!-- ===== SOCIAL PROOF TOP BAR ===== -->
+  <div class="topbar-social" id="topbar-social">
+    <div class="container topbar-inner">
+      <span class="topbar-pulse"></span>
+      <span class="topbar-text"><strong id="viewer-count">9</strong> pessoas estão visualizando agora</span>
+    </div>
+  </div>
+
   <!-- ===== HEADER ===== -->
   <header class="header" id="header">
     <div class="container">
       <a href="#" class="logo">
         <img src="assets/logo-prevent-senior.webp" alt="Prevent Senior" class="logo-img" width="180" height="28">
 
-        <img src="assets/logo-gas.svg" alt="GAS Corretora Autorizada" class="logo-gas-header" width="154" height="42">
+        <img src="assets/logo-gas-nova.svg" alt="GAS Corretora Autorizada" class="logo-gas-header" width="auto"
+          height="42">
       </a>
 
       <!-- Navigation -->
@@ -206,11 +215,11 @@
           <div class="stat-label">Unidades no RJ</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">21</div>
+          <div class="stat-number">40<span class="stat-accent"></span>+</span></div>
           <div class="stat-label">Unidades em SP</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">50<span class="accent">+</span></div>
+          <div class="stat-number">25<span class="stat-accent">+</span></div>
           <div class="stat-label">Anos de experiência</div>
         </div>
         <div class="stat-item">
@@ -510,12 +519,18 @@
   <!-- ===== UNIDADES RJ ===== -->
   <section class="section units" id="unidades">
     <div class="container">
+      <!-- Header da seção: independente dos wrappers para funcionar com geolocalização -->
+      <div class="section-header fade-in">
+        <span class="section-label">Onde Estamos</span>
+        <h2 class="section-title">Nossas Unidades</h2>
+        <p class="section-desc">Rede própria estrategicamente localizada no Rio de Janeiro e São Paulo.</p>
+      </div>
+
       <!-- ===== RJ WRAPPER ===== -->
       <div id="units-wrapper-rj">
-        <div class="section-header fade-in">
-          <span class="section-label">Onde Estamos</span>
-          <h2 class="section-title">Unidades Rio de Janeiro</h2>
-          <p class="section-desc">Rede própria estrategicamente localizada no Rio de Janeiro.</p>
+        <div class="section-header fade-in units-region-header">
+          <h3 class="section-title">Unidades Rio de Janeiro</h3>
+          <span class="region-accent"></span>
         </div>
 
         <!-- ===== CAROUSEL RJ ===== -->
@@ -619,9 +634,9 @@
 
       <!-- ===== SP WRAPPER ===== -->
       <div id="units-wrapper-sp">
-        <div class="section-header fade-in" style="margin-top: 80px;">
-          <h2 class="section-title">Unidades São Paulo</h2>
-          <p class="section-desc">Ampla rede própria na capital paulista e região metropolitana.</p>
+        <div class="section-header fade-in units-region-header">
+          <h3 class="section-title">Unidades São Paulo</h3>
+          <span class="region-accent"></span>
         </div>
 
         <!-- ===== CAROUSEL SP ===== -->
@@ -1359,7 +1374,7 @@
         </p>
         <div class="broker-details">
           <div class="broker-logo-container">
-            <img src="assets/logo-gas.svg" alt="GAS Corretora" class="broker-logo">
+            <img src="assets/logo-gas-nova.png" alt="GAS Corretora" class="broker-logo">
           </div>
           <div class="broker-legal">
             <p><strong>CNPJ:</strong> 60.759.360/0001-01</p>
@@ -1412,16 +1427,7 @@
             </svg>
             (21) 99737-6154
           </a>
-          <div class="footer-locations">
-            <div class="footer-loc-item">
-              <strong>São Paulo:</strong><br>
-              Av. Brigadeiro Luís Antônio, 3521<br>Jardim Paulista
-            </div>
-            <div class="footer-loc-item">
-              <strong>Rio de Janeiro:</strong><br>
-              Rua Lauro Müller, 116<br>Botafogo
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
