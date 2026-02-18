@@ -80,6 +80,24 @@
                 padding: 24px;
             }
         }
+
+        /* Header customization for Privacy Page */
+        .header .container {
+            position: relative;
+        }
+
+        .header .nav-menu {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+        }
+
+        /* Garante que o tamanho do texto é identico à página principal */
+        .topbar-text {
+            font-size: 12px !important;
+        }
     </style>
 </head>
 
@@ -90,6 +108,8 @@
         <div class="container topbar-inner">
             <span class="topbar-pulse"></span>
             <span class="topbar-text"><strong id="viewer-count">9</strong> pessoas estão visualizando agora</span>
+
+
         </div>
     </div>
 
