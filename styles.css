@@ -591,21 +591,14 @@ ul {
 
 .stat-number {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--white);
   line-height: 1;
-  position: relative;
-  display: inline-block;
 }
 
-.stat-number .accent {
+.stat-accent {
   color: var(--blue-accent);
-  position: absolute;
-  top: 0;
-  right: -24px;
-  /* Adjust spacing of the plus sign */
-  font-size: 1.5rem;
-  /* Optional: adjust size if needed */
+  vertical-align: baseline;
 }
 
 .stat-label {
