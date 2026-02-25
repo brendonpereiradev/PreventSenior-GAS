@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /politica-de-privacidade.html
+
+Sitemap: https://gasplanos.com.br/sitemap.xml

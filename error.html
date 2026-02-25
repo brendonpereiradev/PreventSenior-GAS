@@ -14,9 +14,8 @@
         })(window, document, 'script', 'dataLayer', 'GTM-5KQ5BVDB');</script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade | G.A.S Planos</title>
-    <meta name="description"
-        content="Política de Privacidade da G.A.S Planos. Saiba como coletamos, usamos e protegemos seus dados.">
+    <title>Página não encontrada | G.A.S Planos</title>
+    <meta name="description" content="A página que você está procurando não existe ou foi removida.">
     <meta name="robots" content="noindex">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="apple-touch-icon" href="assets/favicon.svg">
@@ -28,11 +27,10 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Política de Privacidade | G.A.S Planos">
-    <meta property="og:description"
-        content="Política de Privacidade da G.A.S Planos. Saiba como coletamos, usamos e protegemos seus dados.">
+    <meta property="og:title" content="Página não encontrada | G.A.S Planos">
+    <meta property="og:description" content="A página que você está procurando não existe ou foi removida.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gasplanos.com.br/politica-de-privacidade.html">
+    <meta property="og:url" content="https://gasplanos.com.br/error.html">
     <meta property="og:image" content="https://gasplanos.com.br/assets/logo-prevent-senior.webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,81 +38,106 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
     <style>
-        /* Specific styles for privacy page */
-        .privacy-content {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--white);
-            padding: 40px;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--gray-200);
-        }
-
-        .privacy-content h2 {
-            color: var(--blue-dark);
-            font-size: 1.5rem;
-            margin-top: 32px;
-            margin-bottom: 16px;
-            border-bottom: 2px solid var(--gray-100);
-            padding-bottom: 8px;
-        }
-
-        .privacy-content p {
-            color: var(--gray-600);
-            margin-bottom: 16px;
-            line-height: 1.8;
-        }
-
-        .privacy-content ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin-bottom: 16px;
-            color: var(--gray-600);
-        }
-
-        .privacy-content li {
-            margin-bottom: 8px;
-        }
-
-        .back-btn {
-            display: inline-flex;
+        .error-section {
+            display: flex;
             align-items: center;
-            gap: 8px;
-            color: var(--blue-brand);
-            font-weight: 600;
-            margin-bottom: 32px;
-            transition: var(--transition);
+            justify-content: center;
+            min-height: 80vh;
+            padding: 120px 0 80px;
+            background-color: var(--gray-50);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .back-btn:hover {
+        .error-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            padding: 0 20px;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
             color: var(--blue-dark);
-            transform: translateX(-4px);
+            line-height: 1;
+            margin-bottom: 16px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .error-code::after {
+            content: '';
+            position: absolute;
+            bottom: 10%;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background-color: var(--blue-brand);
+            opacity: 0.2;
+            z-index: -1;
+            transform: skew(-15deg);
+        }
+
+        .error-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 24px;
+        }
+
+        .error-message {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Ambient background decoration */
+        .error-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 1;
+            opacity: 0.4;
+        }
+
+        .blob-1 {
+            width: 400px;
+            height: 400px;
+            background: rgba(0, 85, 184, 0.15);
+            /* blue-brand equivalent */
+            top: -100px;
+            left: -100px;
+        }
+
+        .blob-2 {
+            width: 300px;
+            height: 300px;
+            background: rgba(142, 187, 34, 0.15);
+            /* green-brand equivalent */
+            bottom: -50px;
+            right: -50px;
         }
 
         @media (max-width: 768px) {
-            .privacy-content {
-                padding: 24px;
+            .error-code {
+                font-size: 6rem;
             }
-        }
 
-        /* Header customization for Privacy Page */
-        .header .container {
-            position: relative;
-        }
-
-        .header .nav-menu {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            margin: 0;
-        }
-
-        /* Garante que o tamanho do texto é identico à página principal */
-        .topbar-text {
-            font-size: 12px !important;
+            .error-title {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -125,19 +148,9 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- ===== SOCIAL PROOF TOP BAR ===== -->
-    <div class="topbar-social" id="topbar-social">
-        <div class="container topbar-inner">
-            <span class="topbar-pulse"></span>
-            <span class="topbar-text"><strong id="viewer-count">9</strong> pessoas estão visualizando agora</span>
-
-
-        </div>
-    </div>
-
     <!-- ===== HEADER ===== -->
     <header class="header scrolled" id="header"
-        style="background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(20px);">
+        style="top: 0; background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(20px);">
         <div class="container">
             <a href="index.html" class="logo">
                 <img src="assets/logo-prevent-senior.webp" alt="Prevent Senior" class="logo-img" width="180"
@@ -147,7 +160,7 @@
                     height="30">
             </a>
 
-            <!-- Navigation (Simplified for Policy Page) -->
+            <!-- Navigation -->
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="index.html" class="nav-link">Voltar ao Início</a></li>
@@ -165,64 +178,29 @@
         </div>
     </header>
 
-    <main class="section" style="background-color: var(--gray-50); min-height: 80vh; padding-top: 120px;">
-        <div class="container">
-            <a href="index.html" class="back-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" width="20" height="20">
-                    <line x1="19" y1="12" x2="5" y2="12"></line>
-                    <polyline points="12 19 5 12 12 5"></polyline>
-                </svg>
-                Voltar para a Home
-            </a>
+    <main class="error-section">
+        <!-- Decorative blobs -->
+        <div class="error-blob blob-1"></div>
+        <div class="error-blob blob-2"></div>
 
-            <div class="section-header" style="text-align: left; margin-bottom: 40px;">
-                <h1 class="section-title">Política de Privacidade</h1>
-                <p class="section-desc" style="margin: 0; text-align: left;">Última atualização: 13 de Fevereiro de 2026
-                </p>
-            </div>
-
-            <div class="privacy-content">
-                <p>A sua privacidade é importante para nós. É política do nosso site respeitar a sua privacidade em
-                    relação a
-                    qualquer informação sua que possamos coletar no site <a href="https://gasplanos.com.br"
-                        style="color: var(--blue-brand); font-weight: 600;">G.A.S Planos</a>.</p>
-
-                <h2>1. Informações que Coletamos</h2>
-                <p>Solicitamos informações pessoais, como nome, telefone e idade, apenas quando realmente precisamos
-                    delas para lhe
-                    fornecer um serviço (cotação de plano de saúde). Fazemo-lo por meios justos e legais, com o seu
-                    conhecimento e
-                    consentimento.</p>
-
-                <h2>2. Uso das Informações</h2>
-                <p>Utilizamos as informações coletadas unicamente para entrar em contato com você via WhatsApp ou
-                    telefone para
-                    apresentar as condições dos planos de saúde da Prevent Senior, conforme sua solicitação.</p>
-
-                <h2>3. Compartilhamento de Dados</h2>
-                <p>Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando
-                    exigido por
-                    lei ou para cumprimento de contrato com a operadora de saúde.</p>
-
-                <h2>4. Cookies</h2>
-                <p>Utilizamos cookies para analisar o tráfego e melhorar a experiência do usuário. Você pode desativar
-                    os cookies
-                    nas configurações do seu navegador, mas isso pode afetar a funcionalidade do site.</p>
-
-                <h2>5. Seus Direitos</h2>
-                <p>Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não
-                    possamos
-                    fornecer alguns dos serviços desejados.</p>
-
-                <h2>6. Contato</h2>
-                <p>Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em
-                    contato
-                    conosco através dos canais oficiais disponíveis no site.</p>
-
-                <p
-                    style="margin-top: 32px; font-size: 0.9rem; border-top: 1px solid var(--gray-200); padding-top: 16px;">
-                    Esta política é efetiva a partir de <strong>Fevereiro/2026</strong>.</p>
+        <div class="container error-content fade-in">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Página Não Encontrada</h1>
+            <p class="error-message">
+                Desculpe, a página que você tentou acessar não existe, foi movida ou está temporariamente indisponível.
+            </p>
+            <div class="error-actions">
+                <a href="index.html" class="btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" width="20" height="20" style="margin-right: 8px;">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    Voltar para o Início
+                </a>
+                <a href="https://wa.me/5521997376154" class="btn-secondary" target="_blank" rel="noopener">
+                    Falar com Consultor
+                </a>
             </div>
         </div>
     </main>
@@ -252,7 +230,7 @@
                         <a href="index.html#beneficios">Benefícios</a>
                         <a href="index.html#unidades">Unidades</a>
                         <a href="index.html#contato">Contato</a>
-                        <a href="#">Política de Privacidade</a>
+                        <a href="politica-de-privacidade.html">Política de Privacidade</a>
                     </div>
                 </div>
 
@@ -273,7 +251,6 @@
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
