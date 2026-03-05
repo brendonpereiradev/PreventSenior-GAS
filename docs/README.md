@@ -1,46 +1,51 @@
-# Landing Page (Vendas) - Prevent Senior
+# G.A.S Planos - Prevent Senior (Landing Page)
 
-Landing page de vendas focada na captação de leads para planos de saúde da Prevent Senior, com ênfase no público do Rio de Janeiro. O projeto visa fornecer informações claras, tabela de preços e um canal direto de contato via WhatsApp.
+**G.A.S Planos** é uma landing page premium desenvolvida para a comercialização de convênios médicos da Prevent Senior, com foco principal no fomento de captação de leads e conversão de vendas para o público do Rio de Janeiro e São Paulo.
 
-## 🚀 Começando
+O projeto foi inteiramente construído com o propósito de oferecer uma navegação de alto nível (Premium UX/UI), apresentando de forma clara os benefícios, tabela de preços, rede credenciada e diferenciais, tudo integrado diretamente a canais de atendimento instantâneo (WhatsApp).
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+---
 
-### Pré-requisitos
+## 🎯 Objetivo do Projeto
 
-Não há pré-requisitos complexos. Você precisa apenas de um navegador moderno (Chrome, Firefox, Edge, Safari).
+Criar uma experiência digital "Glassmorphism" e "Dark Mode" native que transmita elegância, sofisticação e confiança aos usuários (em sua maioria, o público 40+ e seus familiares). A estrutura da página foi pensada estrategicamente como um funil de conversão direto, removendo atritos entre a leitura das informações e o contato final com o corretor.
 
-### Instalação e Execução
+---
 
-1.  Clone o repositório:
-    ```bash
-    git clone [URL_DO_REPOSITORIO]
-    ```
-2.  Navegue até a pasta do projeto:
-    ```bash
-    cd "Landing Page (Vendas)"
-    ```
-3.  Abra o arquivo `index.html` diretamente no seu navegador ou use uma extensão como "Live Server" no VS Code.
+## 🛠️ Tecnologias e Arquitetura
 
-## 🛠️ Tecnologias Utilizadas
+O projeto utiliza uma stack fluida e performática, sem dependência de frameworks pesados, garantindo carregamento rápido e estabilidade:
 
-*   **HTML5** - Estrutura semântica da página.
-*   **CSS3** - Estilização e layout responsivo.
-*   **JavaScript (Vanilla)** - Interatividade, como carrosséis e manipulação do DOM.
-*   **Design System** - Tipografia fluida (`clamp()`) e paleta de cores consistente.
-*   **Assets Otimizados** - Uso estratégico de SVG (vetor) e PNG para máxima nitidez e performance.
+*   **HTML5 Semântico:** Estrutura otimizada para SEO e acessibilidade.
+*   **CSS3 Vanilla:** Estilização baseada em propriedades customizadas (variáveis), flexbox/grid, animações nativas super otimizadas e efeitos em "Glassmorphism" (backdrop-filter).
+*   **JavaScript (ES6+):** Controle de interações na interface (Mobile Drawer Navigation, Accordions de FAQ, Carrosséis customizados) e observadores de interseção (Intersection Observer) para *fade-ins* em tempo de rolagem.
+*   **Design Responsivo Premium:** Tipografia fluida baseada em `clamp()`, layout auto-adaptável do Mobile ao Ultrawide (4k+).
+*   **Performance Assets:** Utilização de imagens WebP e SVGs inline/linkados para máxima nitidez em displays Retina e minimização de *payload*.
 
-## ⚙️ Funcionalidades
+---
 
-*   **Apresentação do Plano:** Destaques dos benefícios da Prevent Senior.
-*   **Tabela de Preços:** Valores atualizados por faixa etária e categoria.
-*   **Rede Credenciada:** Carrossel interativo mostrando hospitais e unidades (separado por RJ e SP).
-*   **Botão WhatsApp:** CTA (Chamada para Ação) flutuante e fixo para contato direto com o corretor.
-*   **Responsividade:** Layout adaptável para Celulares, Tablets e Desktops.
+## ⚙️ Principais Funcionalidades (Features)
 
-## 📂 Estrutura de Arquivos
+*   **Mobile Lateral Drawer (Premium):** Menu mobile otimizado com overlay escuro interativo, botões de Call-To-Action (CTA) integrados, horário de funcionamento dinâmico e "stagger animations" nos links para fluidez superior.
+*   **Tabela de Preços Modular:** Exibição clara de faixas etárias atreladas a valores, utilizando cards com contraste otimizado.
+*   **Rede Credenciada Dual-Geo:** Exibição através de carrossel infinito da infraestrutura hospitalar segmentada pelas regiões core (RJ e SP).
+*   **WhatsApp Conversion Engine:** Diversos pontos de ancoragem da página (Floating Button, Menu Mobile, CTAs dinâmicos) direcionam o usuário de forma pré-preenchida para o WhatsApp do corretor.
+*   **Accessibility Ready (A11y):** Inclusão de recursos focados em acessibilidade assistiva (widget VLibras implementado), alto-contraste em textos chave e elementos focáveis.
+*   **Social Proof Integration:** Faixas de demonstração de parcerias com grandes laboratórios e selos de conformidade técnica/legal.
 
-*   `index.html`: Arquivo principal com a estrutura da página.
-*   `styles.css`: Folha de estilos contendo todo o design visual.
-*   `script.js`: Lógica para o carrossel e comportamentos dinâmicos.
-*   `assets/`: Diretório contendo imagens e ícones.
+---
+
+## 📂 Estrutura de Informação
+
+O projeto é estruturado de forma linear e conta com as seguintes seções de conteúdo principais:
+
+1.  **Hero/Header:** Proposta de valor inicial e conversão imediata.
+2.  **Benefícios:** Vantagens de ser cliente Prevent Senior.
+3.  **Hospitais (Unidades):** Rede própria de atendimento.
+4.  **Tabela de Preços:** Transparência financeira do serviço.
+5.  **Diferenciais e Social Proof:** Parcerias, laboratórios e depoimentos/diferenciais do plano.
+6.  **FAQ:** Perguntas frequentes resolvidas interativamente.
+7.  **Footer/CTA Final:** Rodapé com informações de registro, licenças, LGPD e canais formais.
+
+---
+*Documentação descritiva gerada para controle de portfólio e escopo arquitetural.*
