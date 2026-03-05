@@ -138,24 +138,39 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.getElementById('nav-menu');
   const navToggle = document.getElementById('nav-toggle');
   const navClose = document.getElementById('nav-close');
+  const navOverlay = document.getElementById('nav-overlay');
   const navLinks = document.querySelectorAll('.nav-link');
 
+  // Função para abrir o menu mobile
+  const openMenu = () => {
+    navMenu.classList.add('show');
+    if (navOverlay) navOverlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  };
+
+  // Função para fechar o menu mobile
+  const closeMenu = () => {
+    navMenu.classList.remove('show');
+    if (navOverlay) navOverlay.classList.remove('show');
+    document.body.style.overflow = '';
+  };
+
   if (navToggle) {
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.add('show');
-    });
+    navToggle.addEventListener('click', openMenu);
   }
 
   if (navClose) {
-    navClose.addEventListener('click', () => {
-      navMenu.classList.remove('show');
-    });
+    navClose.addEventListener('click', closeMenu);
   }
 
+  // Fecha o menu ao clicar no overlay
+  if (navOverlay) {
+    navOverlay.addEventListener('click', closeMenu);
+  }
+
+  // Fecha o menu ao clicar em qualquer link de navegação
   navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('show');
-    });
+    link.addEventListener('click', closeMenu);
   });
 
   // ===== Quick Quote Form =====
